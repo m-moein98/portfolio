@@ -12,6 +12,14 @@ const Hire = () => {
               <p className="text-white text-center text-md font-semibold mb-5 lg:text-4xl">
                 I'll replay in less that one day
               </p>
+              <div className="text-white text-center font-semibold lg:text-1xl">
+                <p>
+                  +989372388043
+                </p>
+                <p>
+                  moein1475963.mmz@gmail.com
+                </p>
+              </div>
             </div>
 
             <form
@@ -39,7 +47,7 @@ const Hire = () => {
                 name="textarea"
                 id="textarea"
                 cols="30"
-                rows="10"
+                rows="8"
                 placeholder="Enter message"
                 required
                 className="py-2 px-4 mb-5 rounded border border-solid border-blue-500 text-blue-500 placeholder-blue-500 font-semibold"
