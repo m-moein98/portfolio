@@ -5,19 +5,19 @@ const Hire = () => {
         <section className="showcase">
         <div className="overlay flex flex-col items-center justify-center">
           <div className="flex flex-col w-9/12 lg:w-auto lg:flex-row">
-            <div className="bg-green-500 py-10 rounded lg:px-5 lg:pt-32">
+            <div className="bg-blue-500 py-10 rounded lg:px-5 lg:pt-32">
               <h2 className="text-white text-center text-5xl font-semibold mb-5 lg:text-7xl">
-                Hire a dev
+                Hire me
               </h2>
               <p className="text-white text-center text-md font-semibold mb-5 lg:text-4xl">
-                Replies within 24 hours
+                I'll replay in less that one day
               </p>
             </div>
 
             <form
               name="Feedback form"
               method="post"
-              className="flex flex-col bg-green-200 py-5 px-10 rounded lg:w-7/12"
+              className="flex flex-col bg-blue-200 py-5 px-10 rounded lg:w-7/12"
             >
               <input
                 type="text"
@@ -25,7 +25,7 @@ const Hire = () => {
                 id="username"
                 placeholder="Enter your username"
                 required
-                className="py-2 px-4 mb-5 rounded border border-solid border-green-500 text-green-500 placeholder-green-500 font-semibold"
+                className="py-2 px-4 mb-5 rounded border border-solid border-blue-500 text-blue-500 placeholder-blue-500 font-semibold"
               />
               <input
                 type="email"
@@ -33,7 +33,7 @@ const Hire = () => {
                 id="email"
                 placeholder="Enter your email"
                 required
-                className="py-2 px-4 mb-5 rounded border border-solid border-green-500 text-green-500 placeholder-green-500 font-semibold"
+                className="py-2 px-4 mb-5 rounded border border-solid border-blue-500 text-blue-500 placeholder-blue-500 font-semibold"
               />
               <textarea
                 name="textarea"
@@ -42,12 +42,12 @@ const Hire = () => {
                 rows="10"
                 placeholder="Enter message"
                 required
-                className="py-2 px-4 mb-5 rounded border border-solid border-green-500 text-green-500 placeholder-green-500 font-semibold"
+                className="py-2 px-4 mb-5 rounded border border-solid border-blue-500 text-blue-500 placeholder-blue-500 font-semibold"
               ></textarea>
               <input
                 type="submit"
                 value="Submit"
-                className="bg-green-500 text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-green-800"
+                className="bg-blue-500 text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-blue-800"
               />
             </form>
           </div>
