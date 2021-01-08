@@ -15,7 +15,6 @@ body {
 
 /* showcase */
 .showcase{
-  height : 100vx;
   background: url(assets/showcase.jpg) no-repeat center/cover;
 }
 .showcase .overlay{
