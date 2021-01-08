@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import data from '../data'
 const Projects = () => {
-    const [items, setItems] = useState(data)
-    return <>
+    const [items] = useState(data)
+    return (
         <section className="py-20 px-5 bg-blue-500  grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:h-screen lg:pt-32">
             {items.map((item) => {
                 const {id,path,desc}=item
@@ -14,7 +14,7 @@ const Projects = () => {
                 )
             })}
         </section>
-    </>
+    )
 }
 
 export default Projects
