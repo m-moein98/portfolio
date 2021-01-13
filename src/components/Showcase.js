@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import is_iranian from "../region_check";
+
 const Showcase = () => {
     if (is_iranian) {
         return (
@@ -17,7 +18,6 @@ const Showcase = () => {
                     <Link className="mr-5 bg-white text-blue-500 p-2 px-2 rounded font-semibold transition-all hover:bg-blue-800 hover:text-white" to="/projects">نمونه کارهای من</Link>
                 </div>
                 </div>
-    
             </section>
         )
     }

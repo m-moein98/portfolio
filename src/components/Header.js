@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import is_iranian from "../region_check";
+
 const Header = () => {
     if(is_iranian){
         return (
@@ -17,7 +18,10 @@ const Header = () => {
                             <Link to="/" className="font-semibold hover:text-blue-300">صفحه اصلی</Link>
                         </li>
                         <li className="mr-5">
-                            <Link to="/Projects" className="font-semibold hover:text-blue-300">پروژه ها</Link>
+                            <Link to="/projects" className="font-semibold hover:text-blue-300">پروژه ها</Link>
+                        </li>
+                        <li className="mr-5">
+                            <Link to="/skills" className="font-semibold hover:text-blue-300">مهارت ها</Link>
                         </li>
                         <li>
                             <Link className="bg-blue-500 p-2 rounded font-semibold transition-all hover:bg-blue-500 hover:text-blue-300" to="/Hire">برای من پیام بزار</Link>

@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import data from '../data'
+
 const Projects = () => {
     const [items] = useState(data)
     return (

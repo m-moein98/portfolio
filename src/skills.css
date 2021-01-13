@@ -1,0 +1,50 @@
+body{
+    background: #333;
+    font-family: sans-serif;
+    list-style: none;
+    padding: 0;
+    width: auto;
+}
+.skills{
+    margin: auto;
+    color:white;
+}
+.skills  li{
+    margin: 20px 0;
+}
+*, *::before, *::after{
+  box-sizing:unset;
+}
+*:not(.bar){
+    box-sizing:border-box;
+}
+.bar{
+    background: #fc5c84;
+    display: block;
+    height: 2px;
+    border: 2px solid rgba(0,0,0,1);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px white;
+}
+.bar span{
+    height: 2px;
+    float: left;
+    background: #61c8ff;
+}
+.html{
+    animation: anime 2s;
+}
+.css{
+    animation: anime 3s;
+}
+.jquery{
+    animation: anime 4s;
+}
+.javascript{
+    animation: anime 5s;
+}
+@keyframes anime{
+    0%{width: 0%;}
+    100%{}
+}
