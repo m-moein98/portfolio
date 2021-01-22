@@ -7,12 +7,12 @@ const Header = () => {
         return (
             <header className="flex justify-between py-1 px-5 absolute w-full text-white">
                 <div className="logo">
-                <h2 className="text-3xl ml-5 mt-4 lg:text-4xl sm:2xl">
+                <h2 className="text-2xl ml-5 mt-4 lg:text-4xl md:text-3xl">
                     <Link to="/">MOEIN 98</Link>
                 </h2>
                 </div>
                 <nav>
-                    <ul className="flex mr-5 mt-5 sm:text-sm sm:pt-1">
+                    <ul className="flex mr-5 mt-5 sm:pt-1 text-sm lg:text-base md:text-base">
                         <li className="mr-5">
                             <Link to="/" className="font-semibold hover:text-blue-300">صفحه اصلی</Link>
                         </li>
