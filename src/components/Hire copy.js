@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import is_iranian from "../region_check";
 
 class Hire extends Component{
@@ -32,7 +33,7 @@ class Hire extends Component{
           callData:"",
           message:""
       }
-      this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleSubmit = this.handleChange.bind(this);
     }
   handleChange = (event) =>{
     const target = event.target;
@@ -43,12 +44,9 @@ class Hire extends Component{
     });
   }
   handleSubmit(event){
-      this.postData(this.state.name, this.state.callData, this.state.message)
+      this.postData(this.state.name, this.state.callData, this.state.message);
       event.preventDefault();
-
     }
-
-  
   render(){
     if(is_iranian){
       return (
@@ -71,6 +69,7 @@ class Hire extends Component{
                 </p>
               </div>
             </div>
+  
             <form
               onSubmit={this.handleSubmit}
               className="flex flex-col bg-blue-200 py-5 px-10 rounded lg:w-7/12"
