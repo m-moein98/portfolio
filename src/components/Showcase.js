@@ -7,7 +7,7 @@ const Showcase = () => {
         return (
             <section className="showcase">
                 <div className="overlay flex flex-col items-center text-white justify-center">
-                    <h1 className="text-center text-5xl font-bold mb-5 lg:text-7xl lg:px-56">
+                    <h1 className="text-center text-4xl sm:5xl lg:text-7xl lg:px-56 font-bold mb-5">
                         <span className="text-blue-500">محمدمهدی معین زاده</span>
                     </h1>
                     <h1 className="text-center text-3xl font-bold mb-5 lg:text-4xl lg:px-56">

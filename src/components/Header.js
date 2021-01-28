@@ -5,7 +5,7 @@ import is_iranian from "../region_check";
 const Header = () => {
     if(is_iranian){
         return (
-            <header className="flex justify-between absolute w-full text-white py-1 px-0 sm:px-4 md:px-5 lg:px-5 xl:px-8 2xl:px-10 ">
+            <header className="flex justify-between absolute w-full text-white py-1 px-0 sm:px-4 md:px-5 lg:px-5 xl:px-8 2xl:px-10">
                 <div className="logo">
                 <h2 className="text-2xl ml-5 mt-4 lg:text-4xl md:text-3xl">
                     <Link to="/">MOEIN 98</Link>
@@ -32,7 +32,7 @@ const Header = () => {
     }
     else{
         return (
-            <header className="flex justify-between py-1 px-5 absolute w-full text-white">
+            <header className="flex justify-between absolute w-full text-white py-1 px-0 sm:px-4 md:px-5 lg:px-5 xl:px-8 2xl:px-10">
                 <div className="logo">
                 <h2 className="text-3xl ml-5 mt-4 lg:text-4xl sm:2xl">
                     <Link to="/">MOEIN 98</Link>
