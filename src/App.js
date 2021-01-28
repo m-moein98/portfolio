@@ -13,12 +13,15 @@ function App() {
         <Showcase />
       </Route>
       <Route path="/projects">
+        <Header />
         <Projects />
       </Route>
       <Route path="/hire">
+        <Header />
         <Hire />
       </Route>
       <Route path="/skills">
+        <Header />
         <Skills/>
       </Route>
       <Redirect to="/"/>

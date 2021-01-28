@@ -10,7 +10,7 @@ const Projects = () => {
                 return (
                     <div key={id}>
                         <img src={path} alt={desc} className="p-5 bg-blue-400 rounded"></img>
-                        <smal className="block text-center text-white font-semibold text-lg ">{desc}</smal>
+                        <small className="block text-center text-white font-semibold text-lg ">{desc}</small>
                     </div>
                 )
             })}
