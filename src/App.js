@@ -1,15 +1,15 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Header from './components/Header'
-import Showcase from './components/Showcase'
-import Projects from './components/Projects'
-import Hire from './components/Hire'
-import Skills from './components/Skills'
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import Header from './components/Header';
+import Showcase from './components/Showcase';
+import Projects from './components/Projects';
+import Hire from './components/Hire';
+import Skills from './components/Skills';
 function App() {
   return (
     <Router>
-      <Header />
       <Route path="/" exact>
+        <Header />
         <Showcase />
       </Route>
       <Route path="/projects">
@@ -21,6 +21,7 @@ function App() {
       <Route path="/skills">
         <Skills/>
       </Route>
+      <Redirect to="/"/>
     </Router>
   );
 }
