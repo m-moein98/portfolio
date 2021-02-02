@@ -4,13 +4,27 @@ import data from '../data'
 const Projects = () => {
     const [items] = useState(data)
     return (
-        <section className="py-20 px-5 bg-blue-500  grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:h-screen lg:pt-32">
+        <section class="pt-24 px-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 content-center">
             {items.map((item) => {
-                const {id,path,desc}=item
-                return (
-                    <div key={id}>
-                        <img src={path} alt={desc} className="p-5 bg-blue-400 rounded"></img>
-                        <small className="block text-center text-white font-semibold text-lg ">{desc}</small>
+                const {id,path,desc, address, GithubAddress}=item
+                return ( 
+                    <div className="flex justify-center">
+                    <div key={id} class="text-white p-5 bg-blue-400 rounded-lg text-center flex flex-col justify-center">
+                        <img class="mb-2 hover:shadow-2xl w-80 transform hover:scale-105 hover:scale-y-110 rounded-2xl" src={path} alt={desc}/>
+                        <label class="m-auto px-5 hover:shadow-inner" for="img">{desc}</label>
+                        <div class="flex justify-center mx-2 mt-2">
+                            <a href={GithubAddress}>
+                                <button class="rounded-l-lg bg-gray-500 p-2 hover:bg-gray-600">
+                                    <i class="lni lni-github-original lni-lg"></i> Github 
+                                </button>
+                            </a>
+                            <a href={address}>
+                                <button class="rounded-r-lg bg-gray-500 p-2 hover:bg-gray-600">
+                                    Preview <i class="lni lni-producthunt lni-lg"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                     </div>
                 )
             })}
@@ -18,4 +32,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Projects;
