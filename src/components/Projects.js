@@ -4,10 +4,11 @@ import data from '../data'
 const Projects = () => {
     const [items] = useState(data)
     return (
-        <section class="pt-24 px-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 content-center">
+        <div className="showcase">
+        <section class="project pt-20 sm:pt-20 lg:pt-0 w-auto px-5 grid grid-cols-1 gap-4 md:grid-cols-3 content-center">
             {items.map((item) => {
                 const {id,path,desc, address, GithubAddress}=item
-                return ( 
+                return (
                     <div className="flex justify-center">
                     <div key={id} class="text-white p-5 bg-blue-400 rounded-lg text-center flex flex-col justify-center">
                         <img class="mb-2 hover:shadow-2xl w-80 transform hover:scale-105 hover:scale-y-110 rounded-2xl" src={path} alt={desc}/>
@@ -29,6 +30,7 @@ const Projects = () => {
                 )
             })}
         </section>
+        </div>
     )
 }
 

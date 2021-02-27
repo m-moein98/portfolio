@@ -21,7 +21,11 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
+.showcase .project{
+  min-height: 100vh;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .swal-footer {
 	text-align: center;
 }
