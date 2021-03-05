@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import is_iranian from "../region_check";
 import swal from 'sweetalert';
-
+import '../hire.css'
 class Hire extends Component{
   async postData(name, callData, message){        
     try {
@@ -176,7 +176,7 @@ class Hire extends Component{
               ></textarea>
               <input
                 type="submit"
-                value="ارسال"
+                value="submit"
                 className="bg-blue-500 text-white font-bold tracking-wider py-2 rounded cursor-pointer transition-all hover:bg-blue-800"
               />
             </form>

@@ -34,13 +34,13 @@ const Header = () => {
         return (
             <header className="flex justify-between absolute w-full text-white py-1 px-0 sm:px-4 md:px-5 lg:px-5 xl:px-8 2xl:px-10">
                 <div className="logo">
-                <h2 className="text-3xl ml-5 mt-4 lg:text-4xl sm:2xl">
+                <h2 className="text-3xl sm:2xl lg:text-4xl 2xl:text-5xl ml-5 mt-4">
                     <Link to="/">MOEIN 98</Link>
                 </h2>
 
                 </div>
                 <nav>
-                    <ul className="flex mr-5 mt-5 sm:pt-1 text-sm lg:text-base md:text-base">
+                    <ul className="flex mr-5 mt-5 sm:pt-1 text-sm lg:text-base 2xl:text-xl">
                         <li className="mr-3 sm:mr-4 md:mr-5 xl:mr-8 2xl:mr-10">
                             <Link to="/" className="font-semibold hover:text-blue-300">Home</Link>
                         </li>
@@ -51,7 +51,7 @@ const Header = () => {
                             <Link to="/skills" className="font-semibold hover:text-blue-300">Skills</Link>
                         </li>
                         <li>
-                            <Link className="bg-blue-500 p-2 rounded font-semibold transition-all hover:bg-blue-500 hover:text-blue-300 sm:p-1" to="/Hire">Hire me</Link>
+                            <Link className="bg-blue-500 rounded font-semibold transition-all hover:bg-blue-500 hover:text-blue-300 sm:p-1" to="/Hire">Hire me</Link>
                         </li>
                     </ul>
                 </nav>

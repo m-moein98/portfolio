@@ -25,13 +25,13 @@ const Showcase = () => {
         return (
             <section className="showcase">
                 <div className="overlay flex flex-col items-center text-white justify-center">
-                    <h1 className="text-5xl font-bold text-right mb-5 lg:text-7xl lg:px-56">
+                    <h1 className="text-5xl font-bold text-right mb-5 lg:text-7xl 2xl:text-8xl">
                         It's <span className="text-blue-500">Moein98</span>
                     </h1>
-                    <h1 className="text-center text-3xl font-bold mb-5 lg:text-4xl lg:px-56">
+                    <h1 className="text-center text-3xl font-bold mb-5 lg:text-4xl lg:px-56 2xl:text-5xl">
                         <span className="text-green-500">web developer</span>
                     </h1>
-                <div className="mt-5">
+                <div className="2xl:text-xl mt-5">
                     <Link className="mr-5 bg-blue-500 p-2 px-2 rounded font-semibold transition-all hover:bg-blue-800" to="/hire">Hire me</Link>
                     <Link className="mr-5 bg-white text-blue-500 p-2 px-2 rounded font-semibold transition-all hover:bg-blue-800 hover:text-white" to="/projects">Projects</Link>
                 </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 // import '../skills.css';
-import is_iranian from "../region_check";
 
 const Skills =()=>{
     return(
@@ -15,12 +14,12 @@ const Skills =()=>{
                             </svg>
                         </div>
                         <div className="h-full w-full rounded-2xl flex justify-end items-center">
-                            <div className="bg-yellow-500 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">Python</div>
+                            <div className="bg-gradient-to-r from-yellow-400 to-yellow-200  rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">Python</div>
                         </div>
                     </div>
                     <div className="w-full h-1/5 flex m-auto">
                     <div className="h-full w-full rounded-2xl flex items-center">
-                            <div className="bg-yellow-500 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">django</div>
+                            <div className="bg-gradient-to-r from-yellow-400 to-yellow-200 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">django</div>
                         </div>
                         <div className="h-full w-auto rounded-2xl flex justify-end items-center transform hover:scale-110">
                             <svg className="h-32" viewBox="0 0 128 128">
@@ -35,12 +34,12 @@ const Skills =()=>{
                             </svg>    
                         </div>
                         <div className="h-full w-full rounded-2xl flex justify-end items-center">
-                            <div className="bg-yellow-500 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">JavaScript</div>
+                            <div className="bg-gradient-to-r from-yellow-400 to-yellow-200 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">JavaScript</div>
                         </div>
                     </div>
                     <div className="w-full h-1/5 flex m-auto">
                         <div className="h-full w-full rounded-2xl flex items-center">
-                            <div className="bg-yellow-500 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">React</div>
+                            <div className="bg-gradient-to-r from-yellow-400 to-yellow-200 rounded font-sans font-semibold text-xl h-4/5 w-4/5  flex justify-center items-center">React</div>
                         </div>
                         <div className="h-full w-auto rounded-2xl flex justify-end items-center transform hover:scale-110">
                             <svg className="h-24" viewBox="0 0 128 128">

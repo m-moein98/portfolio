@@ -26,20 +26,20 @@ const data = [
         address: 'https://moein98.ir/url-shortener',
         GithubAddress: 'https://github.com/m-moein98/url-shortener'
     },
-    // {
-    //     id: 4,
-    //     path: forth_pic,
-    //     desc : 'Huddle Landing Page'
-    // },
-    // {
-    //     id: 5,
-    //     path: fifth_pic,
-    //     desc : 'Insure Landing Page'
-    // },
-    // {
-    //     id: 6,
-    //     path: sixth_pic,
-    //     desc : 'Intro Component'
-    // },
+    {
+        id: 4,
+        path: forth_pic,
+        desc : 'Huddle Landing Page'
+    },
+    {
+        id: 5,
+        path: fifth_pic,
+        desc : 'Insure Landing Page'
+    },
+    {
+        id: 6,
+        path: sixth_pic,
+        desc : 'Intro Component'
+    },
 ]
 export default data
