@@ -10,7 +10,7 @@ const Projects = () => {
                 const {id, path, desc, address, GithubAddress}=item
                 return (
                     <div className="flex justify-center 2xl:my-10">
-                    <div key={id} class="text-white p-5 xl:p-8 bg-gradient-to-br from-green-400 via-transparent to-yellow-400 rounded-lg text-center flex flex-col justify-center">
+                    <div key={id} class="text-white p-4 xl:p-3 bg-gradient-to-br from-green-400 via-transparent to-yellow-400 rounded-lg text-center flex flex-col justify-center">
                         <img rel="prefetch" class="mb-2 hover:shadow-2xl w-80 transform hover:scale-105 hover:scale-y-110 rounded-2xl" src={path} alt={desc}/>
                         <label class="m-auto px-5 hover:shadow-inner text" for="img">{desc}</label>
                         <div class="flex justify-center mx-2 mt-2">

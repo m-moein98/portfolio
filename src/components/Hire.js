@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import is_iranian from "../region_check";
 import swal from 'sweetalert';
-import '../hire.css'
+import '../hire.css';
 class Hire extends Component{
   async postData(name, callData, message){        
     try {
@@ -61,10 +61,10 @@ class Hire extends Component{
         <div className="overlay flex flex-col items-center justify-center">
           <div className="flex flex-col w-9/12 lg:w-auto lg:flex-row pt-10">
             <div className="bg-blue-500 py-8 rounded lg:px-5 lg:pt-16 sm:pt-1 font-sans">
-              <h2 className="text-white text-center text-4xl font-semibold mb-5 lg:text-6xl">
+              <h2 className="fa text-white text-center text-4xl font-semibold mb-5 lg:text-6xl">
                 برای من پیام بزار
               </h2>
-              <p className="text-white text-center text-md font-semibold mb-5 lg:text-4xl sm:text-base">
+              <p className="fa text-white text-center text-md font-semibold mb-5 lg:text-4xl sm:text-base">
                 توی کمتر از یک روز<br/> باهاتون تماس میگیرم
               </p>
               <div className="text-white text-center font-semibold lg:text-1xl">
@@ -78,7 +78,7 @@ class Hire extends Component{
             </div>
             <form
               onSubmit={this.handleSubmit}
-              className="flex flex-col bg-blue-200 py-5 px-10 rounded lg:w-7/12"
+              className="fa flex flex-col bg-blue-200 py-5 px-10 rounded lg:w-7/12"
             >
               <input
                 className="text-center py-2 px-4 mb-5 rounded border border-solid border-blue-500 text-blue-500 placeholder-blue-500 font-semibold"

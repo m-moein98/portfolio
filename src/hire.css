@@ -1,1 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap');
+@font-face {
+    font-family: 'Nazanin';
+    src: local('Nazanin'), url(./assets/Nazanin.ttf) format('truetype');
+}
+.fa{
+    font-family: Nazanin;
+}
