@@ -1,0 +1,18 @@
+services:
+  portfolio:
+    build: .
+    container_name: portfolio
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:47318:80"
+    networks:
+      - public
+
+networks:
+  default:
+    driver: bridge
+    external: true
+    name: public
+volumes:
+  static_root:
+  media_root:
