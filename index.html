@@ -14,8 +14,8 @@
 <meta property="og:title" content="Madi Moen — AI-first Backend Lead">
 <meta property="og:description" content="7 years. 4 countries. Backends that don't fall over. Send two lines — I reply the same day.">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0b0e0d">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e0d'/%3E%3Cpath d='M12 46V18h6l8 14 8-14h6v28h-6V30l-8 13-8-13v16z' fill='%234dffa6' transform='translate(6 0) scale(.82) translate(1 7)'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#080c0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e0d'/%3E%3Cpath d='M12 46V18h6l8 14 8-14h6v28h-6V30l-8 13-8-13v16z' fill='%2348c4cc' transform='translate(6 0) scale(.82) translate(1 7)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
 </script>
 <style>
 :root{
-  --bg:#0b0e0d; --panel:#111614; --panel-2:#161c1a; --line:#23302b; --line-2:#31433c;
-  --text:#e9f0ed; --muted:#8fa39b; --accent:#4dffa6; --accent-ink:#04130b; --accent-soft:rgba(77,255,166,.10);
+  --bg:#080c0f; --panel:#11181c; --panel-2:#0c1216; --line:#2a3840; --line-2:#42555e;
+  --text:#f3f7f8; --muted:#adbcc1; --accent:#48c4cc; --accent-ink:#031417; --accent-soft:rgba(72,196,204,.12);
   --shadow:0 24px 60px -24px rgba(0,0,0,.7);
   --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --mono:"Geist Mono",ui-monospace,"Cascadia Code","SF Mono",Menlo,Consolas,monospace;
@@ -41,15 +41,15 @@
 }
 @media (prefers-color-scheme:light){
   :root:not([data-theme="dark"]){
-    --bg:#f5f6f2; --panel:#ffffff; --panel-2:#eef0eb; --line:#dde2db; --line-2:#c4ccc3;
-    --text:#101513; --muted:#55645d; --accent:#087a4a; --accent-ink:#ffffff; --accent-soft:rgba(8,122,74,.09);
-    --shadow:0 24px 60px -30px rgba(16,21,19,.35); color-scheme:light;
+    --bg:#ffffff; --panel:#ffffff; --panel-2:#eff4f5; --line:#cfd9dc; --line-2:#a3b3b9;
+    --text:#081215; --muted:#3f4f55; --accent:#0a6673; --accent-ink:#ffffff; --accent-soft:rgba(10,102,115,.09);
+    --shadow:0 24px 60px -30px rgba(8,18,21,.4); color-scheme:light;
   }
 }
 :root[data-theme="light"]{
-  --bg:#f5f6f2; --panel:#ffffff; --panel-2:#eef0eb; --line:#dde2db; --line-2:#c4ccc3;
-  --text:#101513; --muted:#55645d; --accent:#087a4a; --accent-ink:#ffffff; --accent-soft:rgba(8,122,74,.09);
-  --shadow:0 24px 60px -30px rgba(16,21,19,.35); color-scheme:light;
+  --bg:#ffffff; --panel:#ffffff; --panel-2:#eff4f5; --line:#cfd9dc; --line-2:#a3b3b9;
+  --text:#081215; --muted:#3f4f55; --accent:#0a6673; --accent-ink:#ffffff; --accent-soft:rgba(10,102,115,.09);
+  --shadow:0 24px 60px -30px rgba(8,18,21,.4); color-scheme:light;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
@@ -89,8 +89,9 @@ header.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--b
 /* ---------- hero ---------- */
 .hero{padding:72px 0 56px;position:relative}
 .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(700px 380px at 82% 10%,var(--accent-soft),transparent 70%),
-  linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 44px;opacity:.55;mask-image:linear-gradient(#000,transparent 85%)}
+  background:radial-gradient(760px 420px at 82% 8%,var(--accent-soft),transparent 70%),
+  linear-gradient(var(--line) 1px,transparent 1px) 0 0/96px 96px,
+  linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/96px 96px;opacity:.4;mask-image:linear-gradient(#000,transparent 92%)}
 .hero .wrap{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
 .status{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid var(--line-2);border-radius:999px;font:500 13px/1.2 var(--mono);color:var(--muted);background:var(--panel)}
 .status b{color:var(--text);font-weight:500}
@@ -101,27 +102,44 @@ header.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--b
 .lede strong{color:var(--text);font-weight:600}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .promise{margin-top:16px;font:400 13px/1.5 var(--mono);color:var(--muted)}
-.places{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.place{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:8px;border:1px solid var(--accent);background:var(--accent-soft);font:600 13px/1 var(--mono);letter-spacing:.02em}
-.place span{color:var(--muted);font-weight:400}
+.icons{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px}
+.icons span{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.icons a{width:46px;height:46px;border-radius:12px;border:1px solid var(--line-2);background:var(--panel);color:var(--text);display:grid;place-items:center;transition:transform .15s,border-color .15s,color .15s,background .15s}
+.icons a:hover{transform:translateY(-3px);border-color:var(--accent);color:var(--accent-ink);background:var(--accent)}
+.icons svg{width:20px;height:20px}
 
-.console{background:#0d1211;border:1px solid #26352f;border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:#dfe9e4;font:400 14px/1.75 var(--mono)}
-.console .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid #1e2b26;color:#74877f;font-size:12px}
-.console .bar i{width:10px;height:10px;border-radius:50%;background:#2a3a34}
+.logos{position:relative;margin-top:56px;text-align:center}
+.logos>p{font:500 12.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.logos ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.logos li{display:flex;align-items:center;gap:14px;text-align:left;padding:16px 18px;border:1px solid var(--line-2);border-radius:14px;background:var(--panel)}
+.logos .lg{width:44px;height:44px;flex:none;border-radius:11px;background:var(--text);color:var(--bg);display:grid;place-items:center;font:700 15px/1 var(--mono);letter-spacing:-.02em}
+.logos .lg.img{background:#fff;border:1px solid var(--line);padding:5px;overflow:hidden}
+.logos .lg img{width:100%;height:100%;object-fit:contain;display:block}
+.logos b{display:block;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.logos small{display:block;font:600 11.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-top:3px}
+
+.js .st{opacity:0;animation:rise .55s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*85ms + 80ms)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.console{background:#0b1115;border:1px solid #2a3840;border-radius:16px;box-shadow:var(--shadow);overflow:hidden;color:#e6eef0;font:400 14px/1.75 var(--mono)}
+.console .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid #1f2b31;color:#8fa1a7;font-size:12px}
+.console .bar i{width:10px;height:10px;border-radius:50%;background:#34444c}
 .console .bar span{margin-left:8px}
 .console .body{padding:18px 20px 20px}
-.console .p{color:#4dffa6}
-.console .c{color:#74877f}
+.console .p{color:#5fd0d6}
+.console .c{color:#8fa1a7}
 .console .row{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:12px}
 .console .row b{color:#fff;font-weight:600}
 .console .gap{height:12px}
-.console a.run{display:inline-flex;align-items:center;gap:8px;margin-top:2px;color:#4dffa6;text-decoration:none;border-bottom:1px dashed #2f6f52}
+.console a.run{display:inline-flex;align-items:center;gap:8px;margin-top:2px;color:#5fd0d6;text-decoration:none;border-bottom:1px dashed #2f6a70}
 .console a.run:hover{border-bottom-style:solid}
-.caret{display:inline-block;width:9px;height:17px;background:#4dffa6;animation:blink 1.1s steps(1) infinite;vertical-align:-3px}
+.caret{display:inline-block;width:9px;height:17px;background:#5fd0d6;animation:blink 1.1s steps(1) infinite;vertical-align:-3px}
 @keyframes blink{50%{opacity:0}}
 
 /* ---------- sections ---------- */
-section{padding:76px 0}
+section{padding:88px 0;border-top:1px solid var(--line)}
+section.band{background:var(--panel-2)}
+section.band .card,section.band .step,section.band .case,section.band .faq details{box-shadow:0 1px 0 var(--line)}
 .head{display:grid;gap:14px;margin-bottom:38px;max-width:44em}
 .head h2{font-size:clamp(30px,4vw,46px);font-weight:700}
 .head p{color:var(--muted)}
@@ -142,6 +160,22 @@ section{padding:76px 0}
 .card .ask{margin-top:auto;padding-top:8px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;gap:8px;align-items:center}
 .card .ask:hover{gap:12px}
 
+.cases{display:grid;gap:18px}
+.case{background:var(--panel);border:1px solid var(--line-2);border-radius:18px;overflow:hidden}
+.case>header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:22px 26px;border-bottom:1px solid var(--line)}
+.case>header .where{margin:0;width:100%}
+.case>header h3{font-size:26px;font-weight:700}
+.case>header .role{color:var(--muted);font-size:15px}
+.case>header .when{margin-left:auto;font:400 13px/1 var(--mono);color:var(--muted)}
+.tri{display:grid;grid-template-columns:1fr 1.25fr 1fr}
+.tri>div{padding:22px 26px;border-right:1px solid var(--line)}
+.tri>div:last-child{border-right:0;background:var(--accent-soft)}
+.tri h4{margin:0 0 12px;font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.tri p{font-size:15.5px}
+.tri ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.tri li{position:relative;padding-left:20px;font-size:15.5px}
+.tri li::before{content:"›";position:absolute;left:2px;color:var(--accent);font-family:var(--mono)}
+.tri>div:last-child li{font-weight:600}
 .jobs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .job{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
 .job.wide{grid-column:1/-1}
@@ -162,8 +196,8 @@ section{padding:76px 0}
 .oss h3{font-size:28px;font-weight:700;margin:10px 0 12px}
 .oss p{color:var(--muted)}
 .oss .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-.code{background:#0d1211;border:1px solid #26352f;border-radius:12px;padding:18px 20px;font:400 13.5px/1.75 var(--mono);color:#dfe9e4;overflow-x:auto;white-space:pre}
-.code .k{color:#4dffa6}.code .c{color:#74877f}
+.code{background:#0b1115;border:1px solid #2a3840;border-radius:12px;padding:18px 20px;font:400 13.5px/1.75 var(--mono);color:#e6eef0;overflow-x:auto;white-space:pre}
+.code .k{color:#5fd0d6}.code .c{color:#8fa1a7}
 
 .stack{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .stack div{border-top:1px solid var(--line-2);padding-top:14px}
@@ -223,11 +257,19 @@ section{padding:76px 0}
 .cv{padding:18px;border:1px dashed var(--line-2);border-radius:14px;font-size:15px;color:var(--muted)}
 .cv a{color:var(--accent);font-weight:600}
 
-footer{border-top:1px solid var(--line);padding:26px 0 96px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
-footer a{color:var(--muted);text-decoration:none}
-footer a:hover{color:var(--text)}
-footer .sp{margin-left:auto}
+footer{border-top:1px solid var(--line);background:var(--panel-2);padding:64px 0 96px;font-size:15px}
+.f-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:30px 32px;border-radius:20px;background:var(--accent);color:var(--accent-ink)}
+.f-cta h2{font-size:clamp(24px,3vw,34px);font-weight:800}
+.f-cta p{margin-top:6px;opacity:.85}
+.f-cta .btn{background:var(--accent-ink);border-color:var(--accent-ink);color:var(--accent)}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding:48px 0 36px}
+.f-grid h3{font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.f-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.f-grid a{text-decoration:none;color:var(--text)}
+.f-grid a:hover{color:var(--accent)}
+.f-brand p{color:var(--muted);margin-top:14px;max-width:28em}
+.f-brand .icons{margin-top:18px}
+.f-base{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font:400 13px/1.5 var(--mono)}
 
 .fab{position:fixed;right:20px;bottom:20px;z-index:50;box-shadow:var(--shadow);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .25s,transform .25s}
 .fab.show{opacity:1;transform:none;pointer-events:auto}
@@ -242,7 +284,10 @@ footer .sp{margin-left:auto}
   .hero .wrap,.oss{grid-template-columns:1fr}
   .contact{grid-template-columns:minmax(0,1fr)}
   .hero .wrap>*,.oss>*{min-width:0}
-  .cards,.steps{grid-template-columns:repeat(2,1fr)}
+  .cards,.steps,.logos ul,.f-grid{grid-template-columns:repeat(2,1fr)}
+  .tri{grid-template-columns:1fr}
+  .tri>div{border-right:0;border-bottom:1px solid var(--line)}
+  .tri>div:last-child{border-bottom:0}
   .stack{grid-template-columns:repeat(2,1fr)}
   .nav nav{display:none}.nav .theme{margin-left:auto}
 }
@@ -250,7 +295,10 @@ footer .sp{margin-left:auto}
   body{font-size:16px}
   .wrap{width:calc(100% - 32px)}
   section{padding:56px 0}.hero{padding:44px 0 36px}
-  .metrics,.cards,.steps,.jobs,.fields{grid-template-columns:1fr}
+  .metrics,.cards,.steps,.jobs,.fields,.logos ul,.f-grid{grid-template-columns:1fr}
+  .case>header .when{margin-left:0;width:100%}
+  .icons span{width:100%}
+  .f-cta{padding:24px}.f-cta .btn{width:100%}
   .job.wide ul{grid-template-columns:1fr}
   .job .when{margin-left:0;width:100%}
   .send{grid-template-columns:repeat(3,1fr)}
@@ -266,6 +314,7 @@ footer .sp{margin-left:auto}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .rv{opacity:1;transform:none;transition:none}
+  .js .st{opacity:1;animation:none}
   .dot::after,.caret{animation:none}
 }
 </style>
@@ -294,24 +343,28 @@ footer .sp{margin-left:auto}
 <div class="hero">
   <div class="wrap">
     <div>
-      <div class="status"><span class="dot"></span><span><b>Busy shipping</b> — open to the right offer</span></div>
-      <h1><span class="hook">7 years. 4 countries.</span><em>Backends that don't fall over.</em></h1>
-      <p class="lede"><strong>AI-first backend lead.</strong> I build exchange-grade Python systems, ship LLM features into production, and lead the engineers who keep them running. Hiring, or stuck with a backend that won't scale? <strong>Send me two lines.</strong></p>
-      <div class="cta-row">
+      <div class="status st" style="--i:0"><span class="dot"></span><span><b>Busy shipping</b> — open to the right offer</span></div>
+      <h1><span class="hook st" style="--i:1">7 years. 4 countries.</span><em class="st" style="--i:2">Backends that don't fall over.</em></h1>
+      <p class="lede st" style="--i:3"><strong>AI-first backend lead.</strong> I build exchange-grade Python systems, ship LLM features into production, and lead the engineers who keep them running. Hiring, or stuck with a backend that won't scale? <strong>Send me two lines.</strong></p>
+      <div class="cta-row st" style="--i:4">
         <a class="btn primary" id="heroWa" href="https://wa.me/37443445365" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
           Message me on WhatsApp
         </a>
         <a class="btn" href="#contact" data-who="hire" data-need="role">Write the message for me ↓</a>
       </div>
-      <p class="promise">Same-day reply · Europe hours · you talk to me, not a form</p>
-      <div class="places" aria-label="Where I have worked">
-        <span class="place">VIENNA, AUSTRIA <span>Ireen GmbH</span></span>
-        <span class="place">BRITISH COLUMBIA, CANADA <span>Rigid Robotics</span></span>
+      <div class="icons st" style="--i:5" aria-label="Contact links">
+        <span>Reach me</span>
+        <a href="https://wa.me/37443445365" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+        <a href="https://t.me/Arezoopy" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 3.5 2.5 11l6 2.2 2.3 6.3 3.2-4.3 5 3.6z"/><path d="m8.5 13.2 8-6"/></svg></a>
+        <a href="mailto:moeinpy98@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a href="https://www.linkedin.com/in/moein98/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6c.6-1.1 2-1.9 3.9-1.9 3.6 0 4.3 2.3 4.3 5.4V21h-4v-5.4c0-1.4 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+        <a href="https://github.com/m-moein98" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
       </div>
+      <p class="promise st" style="--i:6">Same-day reply · Europe hours · you talk to me, not a form</p>
     </div>
 
-    <div class="console" aria-label="Profile summary">
+    <div class="console st" style="--i:3" aria-label="Profile summary">
       <div class="bar"><i></i><i></i><i></i><span>madi@yerevan — zsh</span></div>
       <div class="body">
         <div><span class="p">$</span> whoami</div>
@@ -332,15 +385,25 @@ footer .sp{margin-left:auto}
       </div>
     </div>
   </div>
+
+  <div class="wrap logos" style="display:block" aria-label="Companies and projects">
+    <p class="st" style="--i:8">Companies and projects I've shipped for</p>
+    <ul>
+      <li class="st" style="--i:9"><span class="lg img"><img src="logos/ireen.svg" alt="Ireen logo" width="44" height="44" loading="lazy"></span><span><b>Ireen GmbH</b><small>Vienna, Austria</small></span></li>
+      <li class="st" style="--i:10"><span class="lg img"><img src="logos/rigid-robotics.png" alt="Rigid Robotics logo" width="44" height="44" loading="lazy"></span><span><b>Rigid Robotics</b><small>British Columbia, Canada</small></span></li>
+      <li class="st" style="--i:11"><span class="lg img"><img src="logos/geevex.png" alt="Geevex logo" width="44" height="44" loading="lazy"></span><span><b>Geevex</b><small>Crypto exchange</small></span></li>
+      <li class="st" style="--i:12"><span class="lg">PJ</span><span><b>PrivateJet</b><small>Open-source framework</small></span></li>
+    </ul>
+  </div>
 </div>
 
 <!-- ================= RESULTS ================= -->
-<section id="results">
+<section id="results" class="band">
   <div class="wrap">
     <div class="head rv">
       <span class="eyebrow">Results, not adjectives</span>
       <h2>What changed after I joined.</h2>
-      <p>Every number below is from a production system I worked on. Ask me how — that's the conversation worth having.</p>
+      <p>Every number below is from a production system I worked on hands-on. The situation I walked into and what I did about it are in the next section.</p>
     </div>
     <div class="metrics rv">
       <div class="metric"><div class="n" data-count="50" data-pre="+" data-suf="%">+50%</div><div class="l">API calls handled per second</div><div class="s">Microservice architecture I led</div></div>
@@ -409,46 +472,72 @@ footer .sp{margin-left:auto}
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
-<section id="experience">
+<section id="experience" class="band">
   <div class="wrap">
     <div class="head rv">
-      <span class="eyebrow">Where I've done it</span>
-      <h2>Product teams in Europe and Canada. An exchange in production.</h2>
+      <span class="eyebrow">The work behind the numbers</span>
+      <h2>What I walked into, what I did, what changed.</h2>
+      <p>Three teams, three different problems. I was the one in the code and in the pipeline each time.</p>
     </div>
-    <div class="jobs">
-      <article class="job wide rv">
-        <div class="top"><h3>Geevex</h3><span class="tag">CRYPTO EXCHANGE</span><span class="when">2023 — Present</span></div>
-        <p class="role">Backend Developer · leading the backend team</p>
-        <ul>
-          <li>Lead an AI-first backend team scaling a full crypto exchange on Python, Django and FastAPI microservices.</li>
-          <li>Built and run AI and algorithmic trading bots alongside the core exchange.</li>
-          <li>Built ML-based fraud detection and risk scoring for accounts and transactions.</li>
-          <li>Shipped LLM-powered features and automated internal workflows with AI agents and n8n.</li>
-          <li>Made AI coding tools part of daily work: shorter delivery cycles, same code quality bar.</li>
-          <li>Overhauled the codebase over three years: fewer incidents, lower API latency.</li>
-        </ul>
+    <div class="cases">
+      <article class="case rv">
+        <header>
+          <span class="where">Vienna, Austria</span>
+          <h3>Ireen GmbH</h3><span class="role">Backend Developer · MongoDB, FastAPI microservices, Google Cloud, Vue</span><span class="when">12/2021 — 02/2023</span>
+        </header>
+        <div class="tri">
+          <div><h4>What I walked into</h4><p>An existing microservice system that was expensive to develop and maintain, went down too often in production, and took a new engineer 20 days to get productive in.</p></div>
+          <div><h4>What I did</h4><ul>
+            <li>Revamped the microservice system.</li>
+            <li>Built automated pipelines with unit, end-to-end and performance tests.</li>
+            <li>Documented the APIs together with the other backend developers.</li>
+          </ul></div>
+          <div><h4>What changed</h4><ul>
+            <li>60% lower development and maintenance cost</li>
+            <li>50% less production downtime</li>
+            <li>Onboarding down from 20 to 14 days</li>
+          </ul></div>
+        </div>
       </article>
 
-      <article class="job rv">
-        <span class="where">Vienna, Austria</span>
-        <div class="top"><h3>Ireen GmbH</h3><span class="when">12/2021 — 02/2023</span></div>
-        <p class="role">Backend Developer · MongoDB, FastAPI microservices, Google Cloud, Vue</p>
-        <ul>
-          <li>Revamped the microservice system: <b>60% lower</b> development and maintenance cost.</li>
-          <li>Automated unit, E2E and performance pipelines: <b>50% less</b> production downtime.</li>
-          <li>Documented the APIs: onboarding down from <b>20 to 14 days</b>.</li>
-        </ul>
+      <article class="case rv">
+        <header>
+          <span class="where">British Columbia, Canada</span>
+          <h3>Rigid Robotics</h3><span class="role">Backend Developer · Postgres, Django, Azure DevOps, Angular</span><span class="when">12/2020 — 07/2021</span>
+        </header>
+        <div class="tri">
+          <div><h4>What I walked into</h4><p>A Django and Postgres product where the deployment pipeline had no check on how the API performed from the user's side.</p></div>
+          <div><h4>What I did</h4><ul>
+            <li>Added a pipeline step that checks API performance from the user's perspective on deployment.</li>
+            <li>Worked closely with the senior developers and the manager, and applied what I learned from them.</li>
+          </ul></div>
+          <div><h4>What changed</h4><ul>
+            <li>5+ slow areas identified that the pipeline had not caught before</li>
+          </ul></div>
+        </div>
       </article>
 
-      <article class="job rv">
-        <span class="where">British Columbia, Canada</span>
-        <div class="top"><h3>Rigid Robotics</h3><span class="when">12/2020 — 07/2021</span></div>
-        <p class="role">Backend Developer · Postgres, Django, Azure DevOps, Angular</p>
-        <ul>
-          <li>Added a user-perspective API performance check to the deployment pipeline.</li>
-          <li>It surfaced <b>5+ slow areas</b> that had gone unnoticed, and we fixed them.</li>
-          <li>Worked directly with senior engineers and the engineering manager.</li>
-        </ul>
+      <article class="case rv">
+        <header>
+          <span class="where">Crypto exchange</span>
+          <h3>Geevex</h3><span class="role">Backend Developer · leading the backend team · Python, Django, FastAPI</span><span class="when">2023 — Present</span>
+        </header>
+        <div class="tri">
+          <div><h4>What I walked into</h4><p>A full crypto exchange on a microservice architecture that had to scale, with a codebase that needed an overhaul to get there.</p></div>
+          <div><h4>What I did</h4><ul>
+            <li>Led the AI-first backend team and overhauled the codebase over three years.</li>
+            <li>Built AI and algorithmic trading bots that run alongside the core exchange.</li>
+            <li>Built ML-based fraud detection and risk scoring for accounts and transactions.</li>
+            <li>Shipped LLM-powered features and automated internal workflows with AI agents and n8n.</li>
+            <li>Made AI coding tools part of the team's daily work.</li>
+          </ul></div>
+          <div><h4>What changed</h4><ul>
+            <li>Fewer production incidents</li>
+            <li>Lower API latency</li>
+            <li>Shorter delivery cycles at the same quality bar</li>
+            <li>5+ engineers grew into more senior roles</li>
+          </ul></div>
+        </div>
       </article>
 
       <p class="earlier rv"><b>Earlier, 2019 — 2021:</b> three more product teams on Django, Postgres and Angular — including hiring and onboarding that raised team productivity 40%, and an optimisation that increased registered data by 50%.</p>
@@ -481,8 +570,9 @@ footer .sp{margin-left:auto}
 </section>
 
 <!-- ================= STACK ================= -->
-<section id="stack" style="padding-top:20px">
+<section id="stack" class="band">
   <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Stack</span><h2>What I build with.</h2></div>
     <div class="stack rv">
       <div><h3>Languages</h3><div class="chips"><span>Python</span><span>TypeScript</span><span>Go</span><span>Java</span></div></div>
       <div><h3>Backend</h3><div class="chips"><span>Django</span><span>FastAPI</span><span>Microservices</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span></div></div>
@@ -508,7 +598,7 @@ footer .sp{margin-left:auto}
 </section>
 
 <!-- ================= FAQ ================= -->
-<section id="faq" style="padding-top:20px">
+<section id="faq" class="band">
   <div class="wrap">
     <div class="head rv"><span class="eyebrow">Before you ask</span><h2>Short answers.</h2></div>
     <div class="faq rv">
@@ -557,7 +647,7 @@ footer .sp{margin-left:auto}
           <input id="f-company" type="text" placeholder="Company" autocomplete="organization" aria-label="Company">
           <input id="f-time" type="text" placeholder="Call time (Thu 3pm CET)" aria-label="Preferred call time">
         </div>
-        <label class="lab" for="msg">Your message — edit freely</label>
+        <label class="lab" for="msg">Your message — ready to send as it is</label>
         <textarea id="msg" spellcheck="true"></textarea>
         <div class="send" id="send">
           <a class="btn primary" data-ch="wa" href="#" target="_blank" rel="noopener"><span class="best">Fastest reply</span>
@@ -587,11 +677,42 @@ footer .sp{margin-left:auto}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> Madi Moen · madimoen.com · Yerevan, Armenia · open to relocation</span>
-    <span class="sp"></span>
-    <a href="https://github.com/m-moein98" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/moein98/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="#contact">Message me</a>
+    <div class="f-cta">
+      <div><h2>Have a role or a project?</h2><p>Two lines are enough. I reply the same day, Europe hours.</p></div>
+      <a class="btn" href="#contact" data-who="hire" data-need="role">Message me →</a>
+    </div>
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="logo" href="#top"><span class="mark">MM</span><span>Madi Moen</span></a>
+        <p>AI-first backend lead. Python, Django, FastAPI, LLM features and trading systems. Based in Yerevan, Armenia, open to relocation.</p>
+        <div class="icons">
+        <a href="https://wa.me/37443445365" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+        <a href="https://t.me/Arezoopy" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 3.5 2.5 11l6 2.2 2.3 6.3 3.2-4.3 5 3.6z"/><path d="m8.5 13.2 8-6"/></svg></a>
+        <a href="mailto:moeinpy98@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a href="https://www.linkedin.com/in/moein98/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6c.6-1.1 2-1.9 3.9-1.9 3.6 0 4.3 2.3 4.3 5.4V21h-4v-5.4c0-1.4 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+        <a href="https://github.com/m-moein98" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Page</h3><ul>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#oss">Open source</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul></div>
+      <div><h3>Contact</h3><ul>
+        <li><a href="https://wa.me/37443445365" target="_blank" rel="noopener">+374 43 445 365</a></li>
+        <li><a href="https://t.me/Arezoopy" target="_blank" rel="noopener">@Arezoopy</a></li>
+        <li><a href="mailto:moeinpy98@gmail.com">moeinpy98@gmail.com</a></li>
+      </ul></div>
+      <div><h3>Elsewhere</h3><ul>
+        <li><a href="https://www.linkedin.com/in/moein98/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="https://github.com/m-moein98" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://github.com/m-moein98/privatejet" target="_blank" rel="noopener">PrivateJet ↗</a></li>
+        <li><a href="Madi_Moen_Resume.pdf" download>CV (PDF)</a></li>
+      </ul></div>
+    </div>
+    <div class="f-base"><span>© <span id="yr">2026</span> Madi Moen · madimoen.com</span><span>Same-day reply · Europe hours</span></div>
   </div>
 </footer>
 
@@ -618,21 +739,21 @@ footer .sp{margin-left:auto}
   });
 
   /* ---- hero WhatsApp button: opens a chat with a starter line ---- */
-  $('#heroWa').href = 'https://wa.me/' + PHONE + '?text=' + enc("Hi Madi, I found you via madimoen.com. I'd like to talk about ");
+  $('#heroWa').href = 'https://wa.me/' + PHONE + '?text=' + enc("Hi Madi, I came across your portfolio and I'd like to talk. Are you free for a quick call this week?");
 
   /* ---- message composer ---- */
   var WHO = {
-    hire: "I'm hiring and your profile fits what we need.",
-    founder: "I run a product team and I'm looking for someone to own our backend.",
-    project: "I have a project and I'd like you on it.",
-    trading: "We build trading / exchange systems and want to talk."
+    hire: "I'm hiring",
+    founder: "I'm a founder / CTO",
+    project: "I have a project for you",
+    trading: "I'm with a trading / crypto team"
   };
   var NEED = {
-    role: "It's a senior / lead backend role.",
-    rescue: "We need our backend stabilised and scaled.",
+    role: "We're looking for a senior / lead backend engineer and your background fits.",
+    rescue: "Our backend needs to be stabilised and scaled, and that looks like work you've done before.",
     ai: "We want LLM features and AI automation shipped to production.",
-    trading: "It's exchange and trading-bot work.",
-    review: "We'd like an architecture review first.",
+    trading: "We need someone for exchange and trading-bot work.",
+    review: "We'd like you to review our architecture before we commit to it.",
     cv: "Could you send me your CV and current availability?"
   };
   var SUBJECT = {
@@ -645,12 +766,13 @@ footer .sp{margin-left:auto}
 
   function compose() {
     var n = fName.value.trim(), c = fCompany.value.trim(), t = fTime.value.trim();
-    var hi = 'Hi Madi.';
-    if (n && c) hi = 'Hi Madi, ' + n + ' from ' + c + ' here.';
-    else if (n) hi = 'Hi Madi, ' + n + ' here.';
-    else if (c) hi = 'Hi Madi, writing from ' + c + '.';
-    var call = t ? 'Can we do a 15-minute call ' + t + '?' : 'When are you free for a 15-minute call?';
-    msg.value = hi + ' ' + WHO[val('who')] + ' ' + NEED[val('need')] + ' ' + call + '\n\n(via madimoen.com)';
+    var who = WHO[val('who')];
+    var hi = 'Hi Madi, ' + who + '.';
+    if (n && c) hi = 'Hi Madi, this is ' + n + ' from ' + c + '. ' + who + '.';
+    else if (n) hi = 'Hi Madi, this is ' + n + '. ' + who + '.';
+    else if (c) hi = "Hi Madi, I'm writing from " + c + '. ' + who + '.';
+    var call = t ? 'Could we do a 15-minute call ' + t + '?' : 'Are you free for a 15-minute call this week?';
+    msg.value = hi + ' ' + NEED[val('need')] + ' ' + call;
     links();
   }
 
@@ -696,6 +818,9 @@ footer .sp{margin-left:auto}
     });
   });
   compose();
+
+  /* ---- hero builds up piece by piece ---- */
+  $$('.console .body > *').forEach(function (el, i) { el.classList.add('st'); el.style.setProperty('--i', 5 + i * 0.8); });
 
   /* ---- scroll reveal, counters, floating button ---- */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
